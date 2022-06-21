@@ -23,4 +23,17 @@ Binary images (.png) representing the partition of the plane in regions. In whit
 1_Preprocesing/
 ---------------
 
-A_Thinned_images.m 
+A_Thinned_images.m takes the images .png of 0_Dataset, applies the function thinning.m and saves the thinned resulting images .png in the folder A_Thinned images.
+
+           auxiliar functions: thinning.m
+
+B_Labelled_images.m takes the thinned images .png of 'A_Thinned images' and applies the MATLAB function bwlabel to get a matrix L (.txt file) containing labels for the 4-connected regions in the initial image. The .txt file resulting are saved in the folder B_Labelled images.
+
+C_Uded_regions.m takes the labelled images (.txt) of 'B_Labelled images' and applies the function spiral_B.m to get a list with the labels of the regions considered for the later construction of the complexes, considering number = 0 for the simple images and number = 187 for the cell images.
+
+           auxiliar functions: spiral_B.m
+           
+D_Centroids.m takes the labelled images (.txt) of 'B_Labelled images' and applies the MATLAB function regionprops to get the centroids of each region. The results are saved in the folder D_Centroid.
+
+
+
