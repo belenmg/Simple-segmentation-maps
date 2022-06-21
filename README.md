@@ -19,3 +19,8 @@ Binary images (.png) representing the partition of the plane in regions. In whit
 - Simple images: Synthetic images representing a tessellation of the plane or pieces of cellular tissue.
 - Cell  images:  Images of cellular tissue.
 
+---------------
+1_Preprocesing/
+---------------
+
+A_Thinned_images.m 
