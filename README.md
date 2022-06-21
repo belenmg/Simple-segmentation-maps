@@ -11,3 +11,11 @@ The following software is required:
 ----------
 0_Dataset/
 ----------
+
+INPUT IMAGES: 
+
+Binary images (.png) representing the partition of the plane in regions. In white, each region and in black, the boundary between them. There are two subfolders:
+
+- Simple images: Synthetic images representing a tessellation of the plane or pieces of cellular tissue.
+- Cell  images:  Images of cellular tissue.
+
