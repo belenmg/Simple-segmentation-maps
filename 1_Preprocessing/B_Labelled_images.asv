@@ -1,0 +1,54 @@
+%-------------------------------------------------------------------------
+% This script: 
+%
+% I.   Reads an thinned image (.png) from the folders
+%      1_Preprocessing/A_Thinned images/**
+%
+% II.  Applies MATLAB function [bwlabel] to the thinned image: 
+%      L = bwlabel(I,n) -> returns a matrix L, of the same size as I, 
+%      containing labels for the regions in I. In this case, n = 4 
+%      (4-connected regions).
+% 
+% III. Save the labbeled image (.txt) in the folders 
+%      1_Preprocessing/B_Labelled images/**.
+%-------------------------------------------------------------------------
+
+imgs = dir('../0_Dataset/');
+n = length(imgs);
+
+for k = 3:n
+    if isfile(imgs(k).name)
+    else
+        s = strcat('../0_Dataset/',imgs(k).name,'/*.png');
+        % s = '../0_Dataset/Cell images/*.png' or 
+        % s = '../0_Dataset/Simple images/*.png'
+        imgs_k = dir(s);
+        n_k = length(imgs_k);
+
+        for i = 1:n_k
+
+
+imgs = dir('../1_Preprocessing/A_Thinned images/Simple images/*.png');
+n = length(imgs);
+
+for i = 1:n
+    path_I = strcat('../1_Preprocessing/A_Thinned images/Simple images/',imgs(i).name);
+    I = imread(path_I);
+    L = bwlabel(I,4);
+    path_L = strcat('../1_Preprocessing/B_Labelled images/Simple images/',erase(imgs(i).name,'.png'),'_labels.txt');
+    writematrix(L,path_L,'Delimiter',' ');
+end
+
+imgs = dir('../1_Preprocessing/A_Thinned images/Cell images/*.png');
+n = length(imgs);
+
+for i = 1:n
+    path_I = strcat('../1_Preprocessing/A_Thinned images/Cell images/',imgs(i).name);
+    I = imread(path_I);
+    L = bwlabel(I,4);
+    path_L = strcat('../1_Preprocessing/B_Labelled images/Cell images/',erase(imgs(i).name,'.png'),'_labels.txt');
+    writematrix(L,path_L,'Delimiter',' ');
+end
+
+
+
