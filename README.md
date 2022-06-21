@@ -5,5 +5,5 @@ We propose a novel simplicial complex modeling such data, for persistent homolog
 
 The following software is required:
 
-Matlab
-python
+- Matlab
+- Python
