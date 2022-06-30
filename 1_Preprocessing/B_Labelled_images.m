@@ -29,7 +29,7 @@ for k = 3:n
             path_I = strcat('../1_Preprocessing/A_Thinned images/',imgs(k).name,'/',imgs_k(i).name);
             I = imread(path_I);
             L = bwlabel(I,4);
-            path_L = strcat('../1_Preprocessing/A_Thinned images/',imgs(k).name,'/',erase(imgs_k(i).name,'.png'),'_labels.txt');
+            path_L = strcat('../1_Preprocessing/B_Labelled images/',imgs(k).name,'/',erase(imgs_k(i).name,'.png'),'_labels.txt');
             writematrix(L,path_L,'Delimiter',' ');
         end
     end

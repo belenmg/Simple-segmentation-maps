@@ -29,7 +29,7 @@ for k = 3:n
 
         if isequal(imgs(k).name,'Cell images')
             number = 187;
-        elseif isequal(imgs(k).name,'Simple images')
+        else
             number = 0;
         end
 
@@ -38,7 +38,7 @@ for k = 3:n
             regions = load(path_regions);
             list = spiral_B(regions, number);
             path_list = strcat('../1_Preprocessing/C_Used regions/',imgs(k).name,'/',erase(imgs_k(i).name,'_labels.txt'),'_used_regions.txt');
-            writematrix(L,path_L,'Delimiter',' ');
+            writematrix(list,path_list,'Delimiter',' ');
         end
     end
 end

@@ -19,8 +19,6 @@ for k = 3:n
     if isfile(imgs(k).name)
     else
         s = strcat('../0_Dataset/',imgs(k).name,'/*.png');
-        % s = '../0_Dataset/Cell images/*.png' or 
-        % s = '../0_Dataset/Simple images/*.png'
         imgs_k = dir(s);
         n_k = length(imgs_k);
 
