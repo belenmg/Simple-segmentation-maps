@@ -49,11 +49,11 @@ Aux_Read_txt.py contain two functions:
           
 Algorithm_regions_complexes.py contain two functions to compute our filtered simplicial complex:
 
-          region_complex -> INPUT: A labelled image I (txt file of the folder B_Labelled images) and the centroids cm of each region of I (txt file of the folder                                          D_Centroids)
-                            OUTPUT: F_simplices, F_filter_value, F_pixel -> simplices, filter value for each simplex and boundary pixel where the filter value is                                           obtained, respectively.
+          region_complex -> INPUT: A labelled image I (B_Labelled images) and the centroids cm of each region of I (D_Centroids)
+                            OUTPUT: F_simplices, F_filter_value, F_pixel -> simplices, filter value for each simplex and boundary pixel where the filter value is      obtained, respectively.
           
-          valid_region_complex -> INPUT: List of the valid regions (txt file of the folder C_Used regions) and outputs of the previous function region_complex.
-                                  OUTPUT: F_simplices, F_filter_value, F_pixel -> simplices, filter value for each simplex and boundary pixel where the filter value is                                           obtained, respectively, considering only the labels of the valid regions. 
+          valid_region_complex -> INPUT: List of the valid regions (C_Used regions) and outputs of the previous function region_complex.
+                                  OUTPUT: F_simplices, F_filter_value, F_pixel -> simplices, filter value for each simplex and boundary pixel where the filter value is obtained, respectively, considering only the labels of the valid regions. 
    
 Algorithm_alpha_complexes.py contain two functions similar to the previous ones to compute the alpha complex.
 
