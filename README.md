@@ -37,7 +37,7 @@ D_Centroids.m takes the labelled images (.txt) of 'B_Labelled images' and applie
 
 
 -------------------------------------------
-2_2_Filtered complexes and barcodes_PYTHON/
+2_Filtered complexes and barcodes_PYTHON/
 -------------------------------------------
 
 Aux_Read_txt.py contain two functions:
@@ -67,3 +67,23 @@ Aux_Save_data.py contain two functions to save the previous results:
           save_complex -> INPUT: path (where we want to save the complex), F_simplices and F_filter_value. 
                      
           save_perst takes -> INPUT: path (where we want to save the barcode) and output of the function homology.
+          
+-------------------------------------------
+
+JUPYTER NOTEBOOKS to get the results save in the folder 3_Results:
+
+Get_region_complexes_and_barcodes.ipynb
+
+Get_alpha_complexes_and_barcodes.ipynb
+
+----------
+3_Results/
+----------
+
+Folder Filtered complexes: contain the region and alpha filtered complexes in both txt (outputs of the python functions) and png. For the png, use the MATLAB script Representing_complexes.m
+
+          auxiliar functions: draw_complexes.m
+          
+Folder Barcodes: contain the persistence homology of the region and alpha filtered complexes in both txt (outputs of the python functions) and png. For the png, use the MATLAB script Representing_barcodes.m.
+
+          
