@@ -33,15 +33,37 @@ C_Uded_regions.m takes the labelled images (.txt) of 'B_Labelled images' and app
 
            auxiliar functions: spiral_B.m
            
-D_Centroids.m takes the labelled images (.txt) of 'B_Labelled images' and applies the MATLAB function regionprops to get the centroids of each region. The results are saved in the folder D_Centroid.
+D_Centroids.m takes the labelled images (.txt) of 'B_Labelled images' and applies the MATLAB function regionprops to get the centroids of each region. The results are saved in the folder D_Centroids.
 
 
 -------------------------------------------
 2_2_Filtered complexes and barcodes_PYTHON/
 -------------------------------------------
 
-Aux_Read_txt.py file contain two functions:
+Aux_Read_txt.py contain two functions:
 
-          read_txt takes a .txt file and returns a matrix wih the elements of the file converted to int.
-Aux_Save_data.py 
+          read_txt -> INPUT: .txt file. 
+                      OUTPUT: matrix wtih the elements of the file converted to int.
+          read_txt2 -> INPUT: .txt file 
+                       OUTPUT: matrix with the elements of the file converted to float.
+          
+Algorithm_regions_complexes.py contain two functions to compute our filtered simplicial complex:
 
+          region_complex -> INPUT: A labelled image I (txt file of the folder B_Labelled images) and the centroids cm of each region of I (txt file of the folder                                          D_Centroids)
+                            OUTPUT: F_simplices, F_filter_value, F_pixel -> simplices, filter value for each simplex and boundary pixel where the filter value is                                           obtained, respectively.
+          
+          valid_region_complex -> INPUT: List of the valid regions (txt file of the folder C_Used regions) and outputs of the previous function region_complex.
+                                  OUTPUT: F_simplices, F_filter_value, F_pixel -> simplices, filter value for each simplex and boundary pixel where the filter value is                                           obtained, respectively, considering only the labels of the valid regions. 
+   
+Algorithm_alpha_complexes.py contain two functions similar to the previous ones to compute the alpha complex.
+
+Aux_Persistence_homology.py contains a function:
+
+          homology -> INPUT: F_simplices, F_filter_value (outputs of the functions valid_region_complex and alpha_region_complex)
+                      OUTPUT: Persistence homology (barcode) of the complex.
+          
+Aux_Save_data.py contain two functions to save the previous results:
+
+          save_complex -> INPUT: path (where we want to save the complex), F_simplices and F_filter_value. 
+                     
+          save_perst takes -> INPUT: path (where we want to save the barcode) and output of the function homology.
