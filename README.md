@@ -36,4 +36,12 @@ C_Uded_regions.m takes the labelled images (.txt) of 'B_Labelled images' and app
 D_Centroids.m takes the labelled images (.txt) of 'B_Labelled images' and applies the MATLAB function regionprops to get the centroids of each region. The results are saved in the folder D_Centroid.
 
 
+-------------------------------------------
+2_2_Filtered complexes and barcodes_PYTHON/
+-------------------------------------------
+
+Aux_Read_txt.py file contain two functions:
+
+          read_txt takes a .txt file and returns a matrix wih the elements of the file converted to int.
+Aux_Save_data.py 
 
